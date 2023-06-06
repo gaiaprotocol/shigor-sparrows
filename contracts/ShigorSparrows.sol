@@ -7,7 +7,7 @@ contract ShigorSparrows is ERC721GEnumerable {
     event SetName(string name_);
     event SetSymbol(string symbol_);
 
-    constructor() ERC721GEnumerable("Shigor Sparrows", "SPARROW", "https://app-server.gaiaprotocol.com/metadata/sparrow/") {}
+    constructor() ERC721GEnumerable("Shigor Sparrows", "SPARROW", "https://app-server.gaiaprotocol.com/metadata/standard/shigor-sparrows/") {}
 
     function setName(string calldata name_) external {
         require(hasRole(METADATA_OPERATOR_ROLE, msg.sender), "ERC721G: must have metadata operator role to setName");
