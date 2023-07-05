@@ -5,7 +5,7 @@ async function main() {
     const shigorSparrows = ShigorSparrows.attach("0x7340a44AbD05280591377345d21792Cdc916A388");
     await shigorSparrows.deployed();
     
-    await (await shigorSparrows.setBaseURI("https://app-server.gaiaprotocol.com/metadata/standard/shigor-sparrows/")).wait();
+    await (await shigorSparrows.setBaseURI("https://app-server.gaia.cc/metadata/standard/shigor-sparrows/")).wait();
     console.log("Set base URI");
 }
 
